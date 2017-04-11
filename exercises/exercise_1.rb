@@ -12,7 +12,7 @@ puts "----------"
 #   * Gastown (annual_revenue of 190000 carries men's apparel only)
 # 2. Output (`puts`) the number of the stores using ActiveRecord's `count` method, to ensure that there are three stores in the database.
 
-Store.create(
+s = Store.create(
   name:'Burnaby',
   annual_revenue: 300000,
   mens_apparel: true,
@@ -32,7 +32,7 @@ Store.create(
   mens_apparel: true,
   womens_apparel: false,
 )
-
+puts s.errors.messages
 puts Store.count
 
 
